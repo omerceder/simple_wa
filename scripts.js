@@ -18,9 +18,7 @@ loadWebAssembly('squarer.wasm')
 // Event Handlers:
 
 document.addEventListener('DOMContentLoaded',function() {
-
     document.querySelector('input[id="number-input"]').onchange=changeEventHandler;
-
 }, false);
 
 function changeEventHandler( e ) {
