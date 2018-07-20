@@ -1,13 +1,13 @@
 // Web Assembly Loader:
 
-let squarer;
+let squarer
 
 function loadWebAssembly(fileName) {
     return fetch(fileName)
     .then(response => response.arrayBuffer())
     .then(bits => WebAssembly.compile(bits))
    .then(module => { return new WebAssembly.Instance(module) })
-};
+}
 
 loadWebAssembly('squarer.wasm')
     .then(instance => {
